@@ -1,3 +1,5 @@
+import { Box } from "@mui/system";
+import { Container, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
 import './Products.css';
@@ -12,15 +14,26 @@ const Products = () => {
   console.log(products);
   return (
     <div id="products">
-      <h2 className="mt-5">Our Products</h2>
-      <div className="products-container">
-        {
-            products?.map((product, index) => <Product 
-              key={product._id}
-              product={product}
-            ></Product>)
-        }
-      </div>
+      
+      <Box sx={{ flexGrow: 1 }}>
+      <Container className="product-container">
+        <Typography sx={{ fontWeight: 500, m:2, color: 'info.main' }} variant="h6" component="div">
+        Our Products
+        </Typography>
+        <Typography sx={{ fontWeight: 600, m: 5, color: 'success.main' }} variant="h4" component="div">
+          Products We Provide
+        </Typography>
+        <Grid
+          container
+          spacing={{ xs: 2, md: 3 }}
+          columns={{ xs: 4, sm: 8, md: 12 }}
+        >
+          {products.map((product) => (
+            <Product key={product.name} product={product}></Product>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
     </div>
   );
 };

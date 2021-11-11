@@ -5,6 +5,10 @@ import Header from "./Pages/Shared/Header/Header";
 import Footer from "./Pages/Shared/Footer/Footer";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import NotFound from "./Pages/NotFound/NotFound";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails";
+import Login from "./Pages/Login/Login/Login";
+import Register from "./Pages/Login/Register/Register";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 
 
 function App() {
@@ -20,6 +24,15 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <PrivateRoute path="/products/:productId">
+              <ProductDetails></ProductDetails>
+            </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
             </Route>
