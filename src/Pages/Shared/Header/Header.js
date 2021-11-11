@@ -11,11 +11,11 @@ const Header = () => {
     <>
       <Navbar bg="dark" variant="dark" sticky="top" collapseOnSelect expand="lg">
         <Container>
-          <Navbar.Brand href="#home">World Tour</Navbar.Brand>
+          <Navbar.Brand href="#home">Bike Arena</Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
-            <Nav.Link as={HashLink} to="/home#tourSpots">Tour Spots</Nav.Link>
+            <Nav.Link as={HashLink} to="/home#products">Products</Nav.Link>
             {user?.email ? 
                 <Nav.Link as={Link} to="/addService">Add Service</Nav.Link> : ''
             }
