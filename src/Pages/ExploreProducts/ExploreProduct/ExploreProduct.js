@@ -1,10 +1,10 @@
 import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Product.css";
+import "./ExploreProduct.css";
 
-const Product = ({ product }) => {
-  const { _id, name, description, price, img } = product;
+const ExploreProduct = ({ exploreProduct }) => {
+  const { _id, name, description, price, img } = exploreProduct;
   return (
     <Grid item xs={4} sm={4} md={4}>
       <Card className="product" sx={{ minWidth: 275, border: 0, boxShadow: 0 }}>
@@ -25,7 +25,7 @@ const Product = ({ product }) => {
           <Typography variant="h6" color="text.secondary">
             Price: {price}
           </Typography>
-          <Link to={`/products/${_id}`}>
+          <Link to={`/exploreProducts/${_id}`}>
             {" "}
             <button className="btn btn-info">Order Now</button>
           </Link>
@@ -35,4 +35,4 @@ const Product = ({ product }) => {
   );
 };
 
-export default Product;
+export default ExploreProduct;

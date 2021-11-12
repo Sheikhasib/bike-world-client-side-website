@@ -49,6 +49,43 @@ const products = [
         name: 'Suzuki GSX-R1000R',
         description:'Starting off this list of fastest bikes in the world, we have the Suzuki GSX-1000R. The GSX-1000R is a litre-class supersport bike offered by the Japanese bike giant. It has proved its mettle by winning prestigious titles like Le Mans & World Endurance Championship over the years. The latest model is offered in two colour options.',
         price: '$17,699'
+    },
+    {
+        id: 7,
+        img: 'https://i.ibb.co/Bn6gf31/MV-Agusta.jpg',
+        name: 'MV Agusta Brutale 1000 RR',
+        description:'Surprise, Surprise, Next on the list of the world’s fastest bikes, we have a naked streetfighter. The MV Agusta Brutale 1000 RR has been updated for the year 2021. This 4-cylinder Italian beauty is among the most powerful naked streetfighter bikes ever made. It is loaded with class-leading electronics and it is extremely lightweight and fast.',
+        price: '$32,000'
+    },
+    {
+        id: 8,
+        img: 'https://i.ibb.co/hBy1VpT/Ducati-v4.jpg',
+        name: 'Ducati Streetfighter V4 S',
+        description:'The Ducati Streetfighter V4 S is another naked bike on this comparison list of the fastest bikes in the world. The Streetfighter V4 S is the latest launch by the Italian brand. The V4 S is lighter and comes fitted with more premium equipment compared to the standard variant of Streetfighter V4.',
+        price: '$24,395'
+    },
+    {
+        id: 9,
+        img: 'https://i.ibb.co/WzBf2FY/kawasaki-2.jpg',
+        name: 'Kawasaki Ninja H2',
+        description:'Next on the list of the world fastest bikes, we have a supercharged monster from Kawasaki. The Kawasaki Ninja H2 is a hypersport bike offered by the brand and unlike its sibling the H2R, the H2 is road legal. This supercharged beast is one of the most powerful street legal bikes in the 1000cc category.',
+        price: '$32,500'
+    },
+    {
+        id: 10,
+        img: 'https://i.ibb.co/X8qMwSg/Ducati-2.jpg',
+        name: 'Ducati Panigale V4 R',
+        description:'The Panigale V4 R is another Italian beast that secures a place on the list of the top 10 fastest bikes in the world. Ducati Panigale V4 R looks gorgeous and it is a pure racing adrenaline machine. It is powerful and it is loaded with the high-end Ducati electronic suite that makes it one of the most performance-oriented supersport out there.',
+        price: '$40,000'
     }
 ]
+
+https://ibb.co/T4kqtzN
+https://ibb.co/BN9F1qx
+https://ibb.co/qgmpr9P
+https://ibb.co/Z2ghfXZ
+
+<Navbar.Text>
+              Signed in as: <a href="#login">{user?.displayName}</a>
+            </Navbar.Text>
 

@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import { useForm } from "react-hook-form";
 import useAuth from "../../../src/hooks/useAuth";
 
-const ProductDetails = () => {
+const ExploreProductDetails = () => {
   const [product, setProduct] = useState({});
   const { productId } = useParams();
   const { user } = useAuth();
@@ -12,7 +12,7 @@ const ProductDetails = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm();
 
   const onSubmit = (data) => {
@@ -21,7 +21,7 @@ const ProductDetails = () => {
     fetch("http://localhost:5000/addOrders", {
       method: "POST",
       headers: { "content-type": "application/json" },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     })
       .then((res) => res.json())
       .then((result) => console.log(result));
@@ -29,7 +29,7 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleProduct/${productId}`)
+    fetch(`http://localhost:5000/exploreSingleProduct/${productId}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, []);
@@ -71,13 +71,14 @@ const ProductDetails = () => {
                 {...register("price", { required: true })}
                 placeholder="Price"
                 defaultValue={product?.price}
+                type="number"
                 className="p-2 m-2 w-100 input-field"
               />
 
               <select {...register("model")} className="p-2 m-2 w-100">
-                <option value="premium">sports</option>
+                <option value="premium">premium</option>
                 <option value="classic">classic</option>
-                <option value="business">vintage</option>
+                <option value="business">business</option>
               </select>
               <br />
 
@@ -96,4 +97,4 @@ const ProductDetails = () => {
   );
 };
 
-export default ProductDetails;
+export default ExploreProductDetails;

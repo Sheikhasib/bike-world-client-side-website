@@ -9,6 +9,10 @@ import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
+import ExploreProduct from "./Pages/ExploreProducts/ExploreProduct/ExploreProduct";
+import ExploreProducts from "./Pages/ExploreProducts/ExploreProducts/ExploreProducts";
+import ExploreProductDetails from "./Pages/ExploreProductDetails/ExploreProductDetails";
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 
 
 function App() {
@@ -24,6 +28,12 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
+            <Route path="exploreProducts">
+              <ExploreProducts></ExploreProducts>
+            </Route>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
+            </PrivateRoute>
             <Route path="/login">
               <Login />
             </Route>
@@ -32,6 +42,9 @@ function App() {
             </Route>
             <PrivateRoute path="/products/:productId">
               <ProductDetails></ProductDetails>
+            </PrivateRoute>
+            <PrivateRoute path="/exploreProducts/:productId">
+              <ExploreProductDetails></ExploreProductDetails>
             </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>

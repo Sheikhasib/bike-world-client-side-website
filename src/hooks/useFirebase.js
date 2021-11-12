@@ -62,7 +62,7 @@ const useFirebase = () => {
           .catch((error) => {
             
           });
-        history.replace('/');
+        // history.replace('/');
       })
       .catch((error) => {
         setAuthError(error.message);

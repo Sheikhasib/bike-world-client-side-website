@@ -25,7 +25,7 @@ const Login = () => {
   const handleOnChange = (e) => {
     const field = e.target.name;
     const value = e.target.value;
-    // console.log(field, value);
+    console.log(field, value);
     const newLoginData = { ...loginData };
     newLoginData[field] = value;
     setLoginData(newLoginData);
@@ -87,7 +87,7 @@ const Login = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <img
-            style={{ width: "100%" }}
+            style={{ width: "100%", height: "100%" }}
             src="https://i.ibb.co/HVJgZPr/login.png"
             alt=""
           />

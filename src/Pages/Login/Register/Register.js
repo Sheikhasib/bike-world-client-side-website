@@ -23,7 +23,7 @@ const Register = () => {
     // console.log(field, value);
     const newLoginData = { ...loginData };
     newLoginData[field] = value;
-    // console.log(newLoginData, field, value);
+    console.log(newLoginData, field, value);
     setLoginData(newLoginData);
   };
 
