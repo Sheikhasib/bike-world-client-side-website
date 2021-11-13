@@ -11,7 +11,7 @@ const ManageAllProducts = () => {
   console.log(status);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allOrders")
+    fetch("http://localhost:5000/allorders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
@@ -35,7 +35,7 @@ const ManageAllProducts = () => {
 
   return (
     <div className="container">
-      <h1>All orders {orders.length}</h1>
+      <h1>Total orders: {orders.length}</h1>
 
       <Table striped bordered hover>
         <thead>
@@ -43,7 +43,7 @@ const ManageAllProducts = () => {
             <th>#</th>
             <th>Service Title</th>
             <th>Event description</th>
-            <th>Image Link</th>
+            <th>Price</th>
             <th>Status</th>
             <th>Action</th>
           </tr>
@@ -54,7 +54,7 @@ const ManageAllProducts = () => {
               <td>{index}</td>
               <td>{pd.name}</td>
               <td>{pd.description}</td>
-              <td>{pd.image}</td>
+              <td>{pd.price}</td>
               <td>
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <select

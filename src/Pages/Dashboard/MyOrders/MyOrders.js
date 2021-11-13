@@ -1,4 +1,5 @@
 import {
+    Paper,
   TableBody,
   TableCell,
   TableContainer,
@@ -7,26 +8,27 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
-import useAuth from "../../../src/hooks/useAuth";
+import useAuth from "../../../hooks/useAuth";
+
 
 const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const { user, token } = useAuth();
   useEffect(() => {
-    const url = `http://localhost:5000/myOrder/${user?.email}`;
+    const url = `http://localhost:5000/myOrder/:${user?.email}`;
     fetch(url, {
-      // headers: {
-      //     'authorization': `Bearer ${token}`
-      //   }
+      headers: {
+          'authorization': `Bearer ${token}`
+        }
     })
       .then((res) => res.json())
       .then((data) => setOrders(data));
-  }, [user?.email]);
+  }, [user?.email, token]);
   return (
     <div>
       <h2>Appointments: {orders.length}</h2>
       <TableContainer component={Paper}>
-        <Table sx={{}} aria-label="Appointments table">
+        <Table sx={{}} aria-label="My Orders Table">
           <TableHead>
             <TableRow>
               <TableCell>Name</TableCell>
@@ -58,3 +60,5 @@ const MyOrders = () => {
 };
 
 export default MyOrders;
+
+

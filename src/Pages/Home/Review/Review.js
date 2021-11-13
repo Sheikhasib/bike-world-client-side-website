@@ -30,6 +30,14 @@ const Review = () => {
         <br />
         <input
           className="input-field"
+          name="name"
+          value={user?.displayName}
+          type="name"
+          {...register("email", { required: true })}
+        />
+        <br />
+        <input
+          className="input-field"
           name="comments"
           placeholder="Comments"
           {...register("comments", { required: true })}
@@ -37,9 +45,9 @@ const Review = () => {
         <br />
 
         <input
-          className="submit-btn btn btn-danger mt-3"
+          className="submit-btn btn btn-success mt-3"
           type="submit"
-          value="Register"
+          value="Submit"
         />
       </form>
     </div>

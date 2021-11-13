@@ -1,5 +1,5 @@
 import React from "react";
-import useAuth from "../../hooks/useAuth";
+import useAuth from "../../../hooks/useAuth";
 import { useForm } from "react-hook-form";
 import './AddProducts.css';
 
@@ -24,7 +24,7 @@ const AddProducts = () => {
   return (
     <div>
       <div>
-        <h1 className="mt-5 text-center text-danger">Please Add Services</h1>
+        <h1 className="mt-5 text-center text-danger">Please Add Products</h1>
         <div className=" w-25 m-auto mt-5">
           <div className=" ">
             <div className="">
@@ -55,9 +55,9 @@ const AddProducts = () => {
                 />
 
                 <select {...register("model")} className="p-2 m-2 w-100">
-                  <option value="premium">premium</option>
+                  <option value="premium">sports</option>
                   <option value="classic">classic</option>
-                  <option value="business">business</option>
+                  <option value="business">vintage</option>
                 </select>
                 <br />
 

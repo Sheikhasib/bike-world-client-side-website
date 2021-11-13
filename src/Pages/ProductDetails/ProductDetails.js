@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { useForm } from "react-hook-form";
-import useAuth from "../../../src/hooks/useAuth";
+import useAuth from "../../hooks/useAuth";
 
 const ProductDetails = () => {
   const [product, setProduct] = useState({});
@@ -32,7 +32,7 @@ const ProductDetails = () => {
     fetch(`http://localhost:5000/singleProduct/${productId}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
-  }, []);
+  }, [productId]);
 
   return (
     <div>

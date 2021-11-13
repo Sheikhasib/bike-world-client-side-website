@@ -92,6 +92,7 @@ const useFirebase = () => {
         setUser(user);
         getIdToken(user)
         .then(idToken => {
+          // console.log(idToken);
           setToken(idToken);
         })
       } else {
@@ -104,10 +105,10 @@ const useFirebase = () => {
 
   // to set admin from user
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user.email}`)
+    fetch(`http://localhost:5000/users/${user?.email}`)
     .then(res => res.json())
     .then(data => setAdmin(data.admin))
-  }, [user.email])
+  }, [user?.email])
 
   const logOut = () => {
     setIsLoading(true);
@@ -133,19 +134,6 @@ const useFirebase = () => {
     })
     .then()
   }
-
-  // // upsert user data to database(mongodb)
-  // const saveGoogleUser = (email, displayName) => {
-  //   const user = {email, displayName};
-  //   fetch('https://sleepy-cliffs-99517.herokuapp.com/users', {
-  //     method: 'PUT',
-  //     headers: {
-  //       'content-type': 'application/json'
-  //     },
-  //     body:JSON.stringify(user)
-  //   })
-  //   .then()
-  // }
 
   return {
     user,

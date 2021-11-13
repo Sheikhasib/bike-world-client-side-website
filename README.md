@@ -2,6 +2,26 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Description:
+
+       A motorcycle, often called a motorbike, bike, or cycle, is a two- or three-wheeled motor vehicle.[1][2][3] Motorcycle design varies greatly to suit a range of different purposes: long-distance travel, commuting, cruising, sport (including racing), and off-road riding. Motorcycling is riding a motorcycle and being involved in other related social activity such as joining a motorcycle club and attending motorcycle rallies.
+
+       There are three major types of motorcycle: street, off-road, and dual purpose. Within these types, there are many sub-types of motorcycles for different purposes. There is often a racing counterpart to each type, such as road racing and street bikes, or motocross including dirt bikes.
+
+Features & Functionality of this project:
+
+         i.Easy to use front-end system.
+
+         ii.Google, Email&Password Sign In method using firebase.
+
+         iii.Using Context API, Load data from mongodb database using heroku.
+
+         iv.Using Private Route, Admin Route.
+
+         v.No need of reloading any page.
+
+         vi. Different users(admin user, normal user).
+
 ## Available Scripts
 
 In the project directory, you can run:

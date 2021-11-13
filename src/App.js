@@ -9,10 +9,14 @@ import ProductDetails from "./Pages/ProductDetails/ProductDetails";
 import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
-import ExploreProduct from "./Pages/ExploreProducts/ExploreProduct/ExploreProduct";
 import ExploreProducts from "./Pages/ExploreProducts/ExploreProducts/ExploreProducts";
 import ExploreProductDetails from "./Pages/ExploreProductDetails/ExploreProductDetails";
+import MyOrders from "./Pages/Dashboard/MyOrders/MyOrders";
+import ManageAllProducts from "./Pages/Dashboard/ManageAllProducts/ManageAllProducts";
+import AddProducts from "./Pages/Dashboard/AddProducts/AddProducts";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import UserPay from "./Pages/Dashboard/UserPay/UserPay";
+import Review from "./Pages/Home/Review/Review";
 
 
 function App() {
@@ -28,7 +32,7 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="exploreProducts">
+            <Route path="/exploreProducts">
               <ExploreProducts></ExploreProducts>
             </Route>
             <PrivateRoute path="/dashboard">
@@ -40,6 +44,21 @@ function App() {
             <Route path="/register">
               <Register />
             </Route>
+            <PrivateRoute path="/myOrders">
+              <MyOrders />
+            </PrivateRoute>
+            <Route path="/manageAllProducts">
+              <ManageAllProducts />
+            </Route>
+            <PrivateRoute path="/addAllProducts">
+              <AddProducts></AddProducts>
+            </PrivateRoute>
+            <PrivateRoute path="/userPay">
+              <UserPay></UserPay>
+            </PrivateRoute>
+            <PrivateRoute path="/review">
+              <Review></Review>
+            </PrivateRoute>
             <PrivateRoute path="/products/:productId">
               <ProductDetails></ProductDetails>
             </PrivateRoute>
