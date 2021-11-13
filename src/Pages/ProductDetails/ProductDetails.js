@@ -18,7 +18,7 @@ const ProductDetails = () => {
   const onSubmit = (data) => {
     data.email = user?.email;
     data.status = "pending";
-    fetch("http://localhost:5000/addOrders", {
+    fetch("https://safe-headland-20298.herokuapp.com/addOrders", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data)
@@ -29,7 +29,7 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/singleProduct/${productId}`)
+    fetch(`https://safe-headland-20298.herokuapp.com/singleProduct/${productId}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [productId]);

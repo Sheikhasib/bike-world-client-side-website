@@ -7,7 +7,7 @@ import ExploreProduct from "../ExploreProduct/ExploreProduct";
 const ExploreProducts = () => {
   const [exploreProducts, setExploreProducts] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/exploreProducts")
+    fetch("https://safe-headland-20298.herokuapp.com/exploreProducts")
       .then((res) => res.json())
       .then((data) => setExploreProducts(data));
   }, []);

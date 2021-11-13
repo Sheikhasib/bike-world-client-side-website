@@ -15,7 +15,7 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const { user, token } = useAuth();
   useEffect(() => {
-    const url = `http://localhost:5000/myOrder/:${user?.email}`;
+    const url = `https://safe-headland-20298.herokuapp.com/myOrder/:${user?.email}`;
     fetch(url, {
       headers: {
           'authorization': `Bearer ${token}`

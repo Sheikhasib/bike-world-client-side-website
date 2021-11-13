@@ -105,7 +105,7 @@ const useFirebase = () => {
 
   // to set admin from user
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user?.email}`)
+    fetch(`https://safe-headland-20298.herokuapp.com/users/${user?.email}`)
     .then(res => res.json())
     .then(data => setAdmin(data.admin))
   }, [user?.email])
@@ -125,7 +125,7 @@ const useFirebase = () => {
   // save or upsert user data to database(mongodb)
   const saveUser = (email, displayName, method) => {
     const user = {email, displayName};
-    fetch('http://localhost:5000/users', {
+    fetch('https://safe-headland-20298.herokuapp.com/users', {
       method: method,
       headers: {
         'content-type': 'application/json'

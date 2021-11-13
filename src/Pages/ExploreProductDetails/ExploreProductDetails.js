@@ -19,7 +19,7 @@ const ExploreProductDetails = () => {
   const onSubmit = (data) => {
     data.email = user?.email;
     data.status = "pending";
-    fetch("http://localhost:5000/addOrders", {
+    fetch("https://safe-headland-20298.herokuapp.com/addOrders", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -30,7 +30,7 @@ const ExploreProductDetails = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/exploreSingleProduct/${productId}`)
+    fetch(`https://safe-headland-20298.herokuapp.com/exploreSingleProduct/${productId}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [productId]);

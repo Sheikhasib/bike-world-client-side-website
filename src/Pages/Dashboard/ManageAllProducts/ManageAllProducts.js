@@ -11,7 +11,7 @@ const ManageAllProducts = () => {
   console.log(status);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allorders")
+    fetch("https://safe-headland-20298.herokuapp.com/allorders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
@@ -24,7 +24,7 @@ const ManageAllProducts = () => {
 
   const onSubmit = (data) => {
     console.log(data, orderId);
-    fetch(`http://localhost:5000/statusUpdate/${orderId}`, {
+    fetch(`https://safe-headland-20298.herokuapp.com/statusUpdate/${orderId}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
